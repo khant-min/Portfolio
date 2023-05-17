@@ -10,7 +10,6 @@
 
 html {
   scroll-behavior: smooth !important;
-  @apply snap-y snap-mandatory;
 }
 
 body {
@@ -26,7 +25,7 @@ section {
 .services,
 .projects,
 .contact {
-  @apply min-h-full snap-start;
+  @apply min-h-full;
 }
 
 .header {
