@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <section className="home" id="home">
+    <section className="home" id="home" data-aos="fade-right">
       <div className="home-content">
         <h3>Hello, It's Me</h3>
         <h1>Khant Min</h1>

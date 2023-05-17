@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Services() {
   return (
-    <section className="services" id="services">
+    <section className="services" id="services" data-aos="fade-right">
       <h2 className="heading">
         My <span>Services</span>
       </h2>

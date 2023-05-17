@@ -49,7 +49,7 @@ const Project: FC<ProjectProps> = ({
 
 export default function Projects() {
   return (
-    <section className="projects" id="projects">
+    <section className="projects" id="projects"  data-aos="fade-right">
       <h2 className="heading">
         Latest <span>Projects</span>
       </h2>

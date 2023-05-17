@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "@types/aos": "^3.0.4",
     "@types/node": "20.1.7",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
+    "aos": "^2.3.4",
     "autoprefixer": "10.4.14",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.2",
