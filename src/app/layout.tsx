@@ -6,7 +6,10 @@ import Footer from "@components/Footer";
 
 export const metadata: Metadata = {
   title: "Khant Min | Web Developer",
-  description: "Software Engineer",
+  description: "A Passionate Full Stack Developer",
+  // icons: {
+  //   icon: "/assets/profile.jpg",
+  // },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
