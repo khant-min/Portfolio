@@ -1,0 +1,348 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --main-color: #0ef;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+
+body {
+  @apply bg-[--bg-color];
+}
+
+section {
+  @apply min-h-full py-[10rem] px-[9%];
+}
+
+.home,
+.about,
+.services,
+.projects,
+.contact {
+  @apply min-h-full;
+}
+
+.header {
+  @apply fixed top-0 left-0 w-[100%] py-1.5 sm:py-4 px-[9%] flex justify-between items-center 
+  z-10 bg-[--bg-color] shadow-lg shadow-cyan-500/50;
+}
+
+.logo {
+  @apply text-4xl text-white;
+}
+
+.navbar {
+  @apply hidden sm:flex font-sans font-semibold;
+}
+
+.navbar a {
+  @apply text-lg text-white ml-[2rem] duration-100;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  @apply text-[--main-color];
+}
+
+.menu-icon {
+  @apply text-4xl text-white sm:hidden;
+}
+
+.home {
+  @apply flex flex-col md:flex-row justify-center items-center;
+}
+
+.home-content {
+  @apply max-w-[80%] sm:max-w-[60%];
+}
+
+.home-content h3 {
+  @apply text-lg sm:text-2xl font-extrabold;
+}
+
+.home-content h3:nth-of-type(2) {
+  @apply mb-6;
+}
+
+span {
+  @apply text-[--main-color];
+}
+
+.home-content h1 {
+  @apply text-2xl sm:text-4xl font-extrabold leading-8 sm:leading-[3.5rem] ml-2;
+}
+
+.home-content p {
+  @apply text-lg sm:text-xl;
+}
+
+.social-media a {
+  @apply inline-flex justify-center items-center w-10 h-10 rounded-full text-lg text-[--main-color]
+   border-2 border-solid border-[--main-color] bg-transparent my-[3rem] mr-3 sm:mr-[1.5rem] transition-all duration-200;
+}
+
+.social-media a:hover {
+  @apply bg-[--main-color] text-[--second-bg-color] shadow-box;
+}
+
+.btn {
+  @apply inline-block py-[.8rem] px-[2rem] bg-[--main-color] rounded-full shadow-box text-lg
+  text-[--second-bg-color] tracking-wide font-bold transition-all duration-200 text-center;
+}
+
+.btn:hover {
+  @apply shadow-none;
+}
+
+.about {
+  @apply flex justify-center items-center gap-2 bg-[--second-bg-color];
+}
+
+.about h2 {
+  @apply mb-4 sm:mb-10 text-center;
+}
+
+.heading {
+  @apply text-2xl sm:text-4xl font-bold mb-5;
+}
+
+.about-detail {
+  @apply flex flex-col gap-4 sm:gap-8;
+}
+
+.about-detail p {
+  @apply indent-10 leading-6 sm:leading-8 text-lg sm:text-xl;
+}
+
+.services h2 {
+  @apply mb-4 sm:mb-10 text-center;
+}
+
+.services-container {
+  @apply flex justify-center items-center flex-wrap gap-4;
+}
+
+.services-box {
+  @apply min-w-[300px];
+}
+
+.services-container .services-box {
+  @apply flex flex-1 flex-wrap flex-col items-center gap-2 bg-[--second-bg-color]  py-[2rem] rounded-xl p-4 transition-all;
+}
+
+.services-container .services-box:hover {
+  @apply scale-[1.02] outline outline-[--main-color];
+}
+
+.services-box h3 {
+  @apply font-bold text-2xl;
+}
+
+.services-box svg {
+  @apply text-[50px] sm:text-[70px] lg:text-[100px];
+}
+
+.services-box p {
+  @apply text-lg m-5 text-center;
+}
+
+.projects {
+  @apply bg-[--second-bg-color];
+}
+
+.projects h2 {
+  @apply mb-6 sm:mb-10 text-center;
+}
+
+.projects-container {
+  @apply grid items-center gap-3;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.projects-container .projects-box {
+  @apply relative rounded-lg overflow-hidden flex;
+}
+
+.projects-box img {
+  @apply w-[100%] transition-all sm:h-[220px];
+}
+
+.projects-box:hover img {
+  @apply scale-[1.1];
+}
+
+.projects-box:hover {
+  @apply shadow-box;
+}
+
+.projects-box .projects-layer {
+  @apply absolute bottom-0 left-0 w-full h-full flex flex-col justify-center items-center text-center px-4 translate-y-[100%] transition-all;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+}
+
+.projects-box:hover .projects-layer {
+  @apply translate-y-[0];
+}
+
+.projects-layer h4 {
+  @apply text-lg sm:text-2xl font-extrabold;
+}
+
+.projects-layer p {
+  @apply text-base sm:text-lg;
+}
+
+.projects-layer a {
+  @apply flex justify-center items-center w-14 h-14 bg-white rounded-full;
+}
+
+.projects-layer a svg {
+  @apply text-[--second-bg-color] text-2xl;
+}
+
+.contact h2 {
+  @apply mb-4 sm:mb-10 text-center;
+}
+
+.contact form {
+  @apply max-w-[70rem] my-[1rem] mx-auto mb-10;
+}
+
+.contact form,
+.contact form .input-box {
+  @apply flex flex-col gap-6 items-center flex-wrap;
+}
+
+.contact form .input-box input {
+  @apply w-full sm:w-[45%] p-3 text-lg text-white bg-[--second-bg-color] rounded-md mr-1;
+}
+.contact form textarea {
+  @apply w-full sm:w-[45%] p-3 text-lg text-white bg-[--second-bg-color] rounded-md mr-1;
+}
+
+.contact form .input-box {
+  @apply flex flex-row justify-evenly;
+}
+
+.contact form textarea {
+  @apply resize-none h-40;
+}
+
+.contact .btn {
+  @apply mt-4 cursor-pointer;
+}
+
+.footer {
+  @apply flex justify-between items-center flex-wrap px-[9%] py-10 bg-[--second-bg-color];
+}
+
+.footer-text {
+  @apply text-sm sm:text-lg text-white text-center;
+}
+
+.footer-iconTop a {
+  @apply hidden sm:inline-flex justify-center items-center p-3 bg-[--main-color] rounded-full transition-all;
+}
+
+.footer-iconTop a:hover {
+  @apply shadow-box;
+}
+
+.footer-iconTop a svg {
+  @apply text-2xl text-[--second-bg-color];
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 617px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/********************** routes *****************/
+
+.frontend,
+.backend,
+.fullstack {
+  @apply bg-[--second-bg-color] text-white m-20 rounded-md flex flex-col items-center gap-10 p-10;
+}
+
+.dev-text {
+  @apply text-2xl mt-10 w-[400px] text-center outline outline-[#0ef] rounded-md p-4;
+  font-family: "Helvetica Neue";
+}
+
+.about img {
+  @apply inline text-white pl-1;
+}
+
+.providers i:nth-of-type(1) {
+  @apply text-red-400 font-semibold;
+}
+.providers i:nth-of-type(2) {
+  @apply text-yellow-400 font-semibold;
+}
+.providers i:nth-of-type(3) {
+  @apply text-green-400 font-semibold;
+}
+.providers i:nth-of-type(4) {
+  @apply text-yellow-500 font-semibold;
+}
+.providers i:nth-of-type(5) {
+  @apply text-red-500 font-semibold;
+}
+.providers i:nth-of-type(6) {
+  @apply text-green-400 font-semibold;
+}
+
+.techs i:nth-of-type(1) {
+  @apply text-[#7CC5D9] font-semibold;
+}
+.techs i:nth-of-type(2) {
+  @apply text-purple-600 font-semibold;
+}
+.techs i:nth-of-type(3) {
+  @apply text-[#68A063] font-semibold;
+}
+.techs i:nth-of-type(4) {
+  @apply text-white font-semibold;
+}
+.techs i:nth-of-type(5) {
+  @apply text-[#007ACC] font-semibold;
+}
+.techs i:nth-of-type(6) {
+  @apply text-[#4DB33D] font-semibold;
+}
+.techs i:nth-of-type(7) {
+  @apply text-[#00758F] font-semibold;
+}
+
+.lang i:nth-of-type(1) {
+  @apply text-yellow-400 font-semibold;
+}
+.lang i:nth-of-type(2) {
+  @apply text-[#007ACC] font-semibold;
+}
+
+.menu {
+  @apply w-[90%] m-auto mt-8 p-6 rounded-3xl bg-[--second-bg-color] text-white;
+}
+
+.menu nav ul {
+  @apply flex flex-col items-center;
+}
+
+.menu nav li {
+  @apply p-4 font-semibold text-2xl hover:text-[--main-color] transition-all hover:scale-125 ease-linear;
+}
