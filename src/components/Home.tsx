@@ -43,7 +43,7 @@ export default function Home() {
           </Link>
         </div>
         <Link
-          href="https://drive.google.com/file/d/1eIHHSZlZ068pCLOCNCUC47TjLP9ozlYH/view?usp=sharing"
+          href="https://drive.google.com/file/d/1OdYs2ntmULmfxZ8uCqbl-zKqNn35hX6L/view?usp=sharing"
           target="_blank"
           className="btn"
         >
